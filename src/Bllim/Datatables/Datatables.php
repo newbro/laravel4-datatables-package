@@ -563,8 +563,7 @@ class Datatables
                 "sEcho" => intval(Input::get('sEcho')),
                 "iTotalRecords" => $this->count_all,
                 "iTotalDisplayRecords" => $this->display_all,
-                "aaData" => $this->result_array_r,
-                "sColumns" => $sColumns
+                "data" => $this->result_array
         );
 
         if(Config::get('app.debug', false)) {
